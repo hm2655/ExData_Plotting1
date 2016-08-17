@@ -1,0 +1,6 @@
+> png("Question 3.png")
+> plot(tday$x, tday$Sub_metering_1, xlab = "Day", ylab = "Energy Sub Metering", main = "Sub Metering", col="black", type="l")
+> points(tday$x, tday$Sub_metering_2, col="red", type="l")
+> points(tday$x, tday$Sub_metering_3, col="blue", type="l")
+> legend("topright", legend=c("Energy_Sub_Metering_1", "Energy_Sub_Metering_2", "Energy_Sub_Metering_3"), col=c("Black", "Red", "Blue"), lty=, lwd=2.5, bty="o")
+> dev.off()
