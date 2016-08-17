@@ -1,0 +1,3 @@
+png("Question2.png")
+plot(tday$x,tday$Global_active_power, type="l", xlab = "Day", ylab = "Global Active Power (Kilowatts)", main=" Global Active Power")
+dev.off()
