@@ -1,0 +1,11 @@
+electricity<-read.table("household_power_consumption.txt", header=TRUE, sep=";", na.strings = "?")
+na.omit(electricity)
+electricity<-na.omit(electricity)
+x<-paste(electricity$Date,electricity$Time)
+strptime(x,"%d/%m/%Y %H:%M:%S")
+electricity$x<-strptime(x,"%d/%m/%Y %H:%M:%S")
+electricity$Date<-as.Date(electricity$Date, format="%d/%m/%Y")
+tday<-electricity[electricity$Date>=2007-02-01 & electricity$Date<=2007-02-02, ]
+png("Question 1.png")
+hist(tday$Global_active_power, xlab = "Gloabl Active Power", ylab = "Frequency", main = "Global Active POwer", col="red")
+dev.off()
